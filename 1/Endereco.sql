@@ -2,13 +2,13 @@
 
 create table endereco (
        id_endereco serial primary key,
-     tx_logradouro varchar(30) not null,
+     nm_logradouro varchar(30) not null,
 	     cd_numero int not null,
 	ds_complemento varchar(150),
 	        cd_cep varchar(8) not null,
-	     tx_bairro varchar(15) not null,
-	     tx_estado varchar(15) not null,
-	     tx_cidade varchar(15) not null
+	     nm_bairro varchar(15) not null,
+	     nm_estado varchar(15) not null,
+	     nm_cidade varchar(15) not null
 );
 
 select * from endereco;
@@ -16,13 +16,13 @@ select * from endereco;
 drop table endereco;
 
 insert into endereco (
-	tx_logradouro,
+	nm_logradouro,
 	cd_numero,
 	ds_complemento,
 	cd_cep,
-	tx_bairro,
-	tx_estado,
-	tx_cidade
+	nm_bairro,
+	nm_estado,
+	nm_cidade
 )
 values
 	('rua aldair celga', 128, 'casa laranja', '29500000', 'cobrinha', 'espirito santo', 'alegre'),
