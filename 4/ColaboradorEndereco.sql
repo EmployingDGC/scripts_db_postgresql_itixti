@@ -1,11 +1,11 @@
 /* create - 4 */
 
 create table colaborador_endereco (
-                 id serial primary key,
-     id_colaborador int not null,
-        id_endereco int not null,
-	foreign key(id_colaborador) references colaborador(id),
-	foreign key(id_endereco) references endereco(id)
+	id_colaborador_endereco serial primary key,
+             id_colaborador int not null,
+                id_endereco int not null,
+	foreign key(id_colaborador) references colaborador(id_colaborador),
+	foreign key(id_endereco) references endereco(id_endereco)
 );
 
 select * from colaborador_endereco;

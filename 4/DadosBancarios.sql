@@ -1,13 +1,13 @@
 /* create - 4 */
 
 create table dados_bancarios (
-	            id serial primary key,
-	id_colaborador int not null unique,
-	         banco varchar(25) not null,
-	       agencia int not null,
-	         conta int not null,
-	    tipo_conta varchar(15) not null,
-	foreign key(id_colaborador) references colaborador(id)
+	id_dados_bancarios serial primary key,
+	    id_colaborador int not null unique,
+	          nm_banco varchar(25) not null,
+	        cd_agencia int not null,
+	          cd_conta int not null,
+	     tx_tipo_conta varchar(15) not null,
+	foreign key(id_colaborador) references colaborador(id_colaborador)
 );
 
 select * from dados_bancarios;
@@ -16,10 +16,10 @@ drop table dados_bancarios;
 
 insert into dados_bancarios (
 	id_colaborador,
-	banco,
-	agencia,
-	conta,
-	tipo_conta
+	nm_banco,
+	cd_agencia,
+	cd_conta,
+	tx_tipo_conta
 )
 values
 	(1, 'caixa economica', 168, 55858, 'poupanca'),

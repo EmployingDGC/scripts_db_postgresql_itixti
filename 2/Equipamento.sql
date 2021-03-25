@@ -1,18 +1,22 @@
 /* create - 2 */
 
 create table equipamento (
-                     id serial primary key,
-	          numeracao int not null unique,
-	     data_aquisicao date not null,
-	id_tipo_equipamento int not null,
-	foreign key(id_tipo_equipamento) references tipo_equipamento(id)
+		    id_equipamento serial primary key,
+	          cd_numeracao int not null unique,
+	          dt_aquisicao date not null,
+	   id_tipo_equipamento int not null,
+	foreign key(id_tipo_equipamento) references tipo_equipamento(id_tipo_equipamento)
 );
 
 select * from equipamento;
 
 drop table equipamento;
 
-insert into equipamento (numeracao, data_aquisicao, id_tipo_equipamento)
+insert into equipamento (
+	cd_numeracao,
+	dt_aquisicao,
+	id_tipo_equipamento
+)
 values
 	(134, '2021-03-17', 2),
 	(135, '2020-05-07', 1),
