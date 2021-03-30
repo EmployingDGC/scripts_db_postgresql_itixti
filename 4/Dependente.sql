@@ -7,7 +7,7 @@ create table dependente (
 	      dt_nascimento date not null,
 		         nm_mae varchar(30),
 		       tx_email varchar(30),
-			     cd_cpf varchar(11),--faltou um unique
+			     cd_cpf varchar(11) unique,
 	id_relacao_parental int not null,
 	foreign key(id_colaborador) references colaborador(id_colaborador),
 	foreign key(id_relacao_parental) references relacao_parental(id_relacao_parental)

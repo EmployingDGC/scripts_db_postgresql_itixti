@@ -2,7 +2,6 @@
 
 create table equipamento (
 		    id_equipamento serial primary key,
-	          cd_numeracao int not null unique,--n precisa desse campo
 	          dt_aquisicao date not null,
 	   id_tipo_equipamento int not null,
 	foreign key(id_tipo_equipamento) references tipo_equipamento(id_tipo_equipamento)

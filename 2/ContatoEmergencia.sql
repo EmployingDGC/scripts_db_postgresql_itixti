@@ -2,7 +2,7 @@
 
 create table contato_emergencia (
 	id_contato_emergencia serial primary key,
-	nm_contato_emergencia varchar(30),--not null
+	nm_contato_emergencia varchar(30) not null,
 	           id_contato int not null,
 	foreign key(id_contato) references contato(id_contato)
 );
