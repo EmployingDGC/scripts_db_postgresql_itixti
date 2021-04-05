@@ -9,21 +9,18 @@ join
 on
 	e.id_equipamento = ce.id_equipamento
 join
-	colaborador c--n precisa desse join
-on
-	c.id_colaborador = ce.id_colaborador
-join
 	tipo_equipamento te
 on
 	e.id_tipo_equipamento = te.id_tipo_equipamento
 where
-	c.id_colaborador = 1
+	ce.id_colaborador = 1
 ;
 
---faltou a ordenacao
+
 select
 	te.nm_tipo_equipamento,
-	count(te.nm_tipo_equipamento) qt_tipo_equipamento
+	te.nm_fabricante,
+	count(te.id_tipo_equipamento) qt_tipo_equipamento
 from
 	equipamento e
 join
@@ -31,22 +28,25 @@ join
 on
 	e.id_tipo_equipamento = te.id_tipo_equipamento
 group by
-	te.nm_tipo_equipamento 
+	te.nm_fabricante,
+	te.nm_tipo_equipamento
+order by 
+	te.nm_tipo_equipamento,
+	te.nm_fabricante
 ;
 
---o select comeca pela tabela de equipamento
 select
 	e.id_equipamento
 from
-	colaborador c
+	equipamento e
 join
 	colaborador_equipamento ce
 on
-	c.id_colaborador = ce.id_colaborador
-join
-	equipamento e
-on
 	e.id_equipamento = ce.id_equipamento
+join
+	colaborador c
+on
+	c.id_colaborador = ce.id_colaborador
 join
 	tipo_equipamento te
 on

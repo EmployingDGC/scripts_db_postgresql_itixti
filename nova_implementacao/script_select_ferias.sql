@@ -2,7 +2,7 @@ select
 	*
 from
 	colaborador c
-join
+inner join
 	colaborador_ferias cf
 on
 	c.id_colaborador = cf.id_colaborador
@@ -16,12 +16,12 @@ select
 	*
 from
 	colaborador c
-join
+inner join
 	colaborador_ferias cf
 on
 	c.id_colaborador = cf.id_colaborador
 where
-	cf.dt_inicio is not NULL--esse campo já não pode ser nulo
+	cf.dt_inicio
 	and
 	cf.dt_inicio > current_date
 order by
@@ -32,7 +32,7 @@ select
 	count(cf.fl_antecipar_decimo_terceiro) qt_antecipar_decimo_terceiro
 from
 	colaborador c
-join
+inner join
 	colaborador_ferias cf
 on
 	c.id_colaborador = cf.id_colaborador
@@ -44,11 +44,11 @@ select
 	*
 from
 	colaborador c
-join
+inner join
 	colaborador_holerite ch
 on
 	c.id_colaborador = ch.id_colaborador
-join
+inner join
 	tipo_holerite th
 on
 	th.id_tipo_holerite  = ch.id_tipo_holerite
@@ -57,8 +57,7 @@ where
 ;
 
 
---sempre bom deixar explicito os campos que esta trazendo no select
---expecificar o tipo de join
+--sempre bom deixar explicito os campos que esta trazendo no select -- OK
 
 
 

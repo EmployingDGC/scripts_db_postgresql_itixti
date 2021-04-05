@@ -12,28 +12,28 @@ where
 	d.id_gestor = 1
 ;
 
---especifica qual o tipo de join
 select
 	c.nm_colaborador,
 	c.vl_salario
 from
 	colaborador c
-join
+inner join
 	colaborador_departamento cd
 on
 	c.id_colaborador = cd.id_colaborador
-join
+inner join
 	departamento d
 on
 	d.id_departamento = cd.id_departamento
 where
-	d.id_departamento = 2--lembra do ; pra terminar cada scipt
+	d.id_departamento = 2
+;
 
---faltou trazer a qt de cada equiapmento do departamento
 select
 	d.nm_departamento,
 	te.nm_tipo_equipamento,
-	ce.dt_atribuicao
+	ce.dt_atribuicao,
+	count(d.nm_departamento) as qt_equipamento
 from
 	colaborador c
 join
@@ -58,6 +58,10 @@ on
 	e.id_tipo_equipamento = te.id_tipo_equipamento
 where
 	d.id_departamento = 1
+group by 
+	d.nm_departamento,
+	te.nm_tipo_equipamento,
+	ce.dt_atribuicao
 ;
 
 select

@@ -32,7 +32,7 @@ create table COLABORADOR(
 	CD_ESTADO_CIVIL INT,
 	NM_MAE VARCHAR(250),
 	NM_PAI VARCHAR(250),	
-	FL_CADASTRO_COMPLETO BOOLEAN default not null false
+	FL_CADASTRO_COMPLETO BOOLEAN default false not null
 );
 
 comment on column COLABORADOR.CD_ETINIA is '1 = BRANCO, 2 = PRETO, 3 = PARDO, 4 = INDIO, 5 = AMARELO';
