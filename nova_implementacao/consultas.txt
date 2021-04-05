@@ -1,0 +1,47 @@
+consultas:
+**todo lugar que tras id, quero que tragam dado que especifique o que referencia o id(cd_etinia/genero/estado_civil n precisa);
+
+colaborador(nos campos de ticket/contrato/cargo quero que retornem o nome do tipo):
+	todos por ondem de contratacao;
+	todos por ordem de nascimento;
+	todos com cadastro completo;
+	todos com cadastro incompleto;
+	todos filtrando por ticket = 1;
+	todos por cargo = 2;
+	todos que tenham nome parecido com 'ia';
+	todos com salario maior que 1000;
+	nome e relação parental dos dependentes de um colabolrador;
+	
+endereco:
+	todos os enderecos;
+	filtrando pelo colaborador;
+
+contato:
+	todos os contatos;
+	todos filtando pelo colaborador;
+	emergencial de um colaborador;
+	todos os emergenciais;
+
+dados bancarios:
+	todos de um colaborador;
+
+departamento:
+	todos os departamentos;
+	departamento pelo gestor;
+	nome e salario dos colaboradores de um departamento;
+	nome do departamento, nome do equipmanto e qt do equipamento atribuido aos colaboradores de um departamento;
+	soma do salario dos colaboradores de um departamento;
+
+equipamento;
+	nome e fabricante do equipamente, data de atribuição a um determinado funcionario;
+	quantidade de equipamentos agrupando por tipo, ordenando nome do tipo de aquipamente e pelo nome do fabricante;
+	trazer o id do equipamento notebook atruibuido a determinado funcionario;
+	
+ferias:
+	trazer todas as ferias necessitando de aprovação ordenando pela data de solicitação começando pela mais antiga;
+	todas as ferias a serem tiradas a partir da data atual ordenando pela mais proximas;
+	qt de ferias que solicitam antecipação de decimo terceiro;
+	dados do colaborador e do holerite que seja do tipo primieira parcela 13;
+
+
+Script pra trazer planilha com todos os dados associados aos colaboradores existentes na base;
