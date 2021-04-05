@@ -1,3 +1,4 @@
+--faltou nos campos de ticket/contrato/cargo quero que retornem o nome do tipo
 select * from colaborador c order by dt_admissao;
 
 select * from colaborador c order by dt_nascimento;

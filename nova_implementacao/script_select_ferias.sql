@@ -21,7 +21,7 @@ join
 on
 	c.id_colaborador = cf.id_colaborador
 where
-	cf.dt_inicio is not null
+	cf.dt_inicio is not NULL--esse campo já não pode ser nulo
 	and
 	cf.dt_inicio > current_date
 order by
@@ -57,6 +57,8 @@ where
 ;
 
 
+--sempre bom deixar explicito os campos que esta trazendo no select
+--expecificar o tipo de join
 
 
 

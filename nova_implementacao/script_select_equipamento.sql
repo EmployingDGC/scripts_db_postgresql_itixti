@@ -9,7 +9,7 @@ join
 on
 	e.id_equipamento = ce.id_equipamento
 join
-	colaborador c
+	colaborador c--n precisa desse join
 on
 	c.id_colaborador = ce.id_colaborador
 join
@@ -20,6 +20,7 @@ where
 	c.id_colaborador = 1
 ;
 
+--faltou a ordenacao
 select
 	te.nm_tipo_equipamento,
 	count(te.nm_tipo_equipamento) qt_tipo_equipamento
@@ -33,6 +34,7 @@ group by
 	te.nm_tipo_equipamento 
 ;
 
+--o select comeca pela tabela de equipamento
 select
 	e.id_equipamento
 from

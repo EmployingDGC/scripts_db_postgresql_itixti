@@ -12,6 +12,7 @@ where
 	d.id_gestor = 1
 ;
 
+--especifica qual o tipo de join
 select
 	c.nm_colaborador,
 	c.vl_salario
@@ -26,8 +27,9 @@ join
 on
 	d.id_departamento = cd.id_departamento
 where
-	d.id_departamento = 2
+	d.id_departamento = 2--lembra do ; pra terminar cada scipt
 
+--faltou trazer a qt de cada equiapmento do departamento
 select
 	d.nm_departamento,
 	te.nm_tipo_equipamento,
